@@ -1,4 +1,4 @@
-FROM shlinkio/shlink-web-client:latest
+FROM shlinkio/shlink-web-client:3
 
 ENV SHLINK_BASIC_AUTH_USERS 'shlink:$2y$05$60tNO1beevtKPMj/jaSzhuxOn21U2dEOXPOdUA2b.TbZ9007kCoLK'
 ENV SHLINK_BASIC_AUTH_NAME 'Shlink Web Client'
