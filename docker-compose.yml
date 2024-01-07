@@ -1,0 +1,20 @@
+version: '3'
+services:
+  shlink-ui:
+    build: .
+    restart: unless-stopped
+    environment:
+      SHLINK_API_KEY: '<your-api-key>'
+      SHLINK_API_URL: 'http://shlink:8080'
+    ports:
+      - 8081:80
+    depends_on:
+      - shlink
+  shlink:
+    image: shlinkio/shlink:latest
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+    environment:
+      SHORT_DOMAIN_HOST: localhost
+      IS_HTTPS_ENABLED: False
